@@ -1,0 +1,76 @@
+- role: user
+  content: |-
+    I will input JSON formatted description about the source where a bacteria species is isolated.
+    Your task is to classify the isolation source into some categories according to the description.
+    
+    The categories to which each input belongs are below. "example" shows an example of input description that should be categorized into the category.
+    - Mangrove
+      - definition: A coastal ecosystem characterized by salt-tolerant trees, shrubs, and other plants.
+      - example: sediment sample collected from the estuarine mangrove ecosystem of Chungkang
+    - Coral reef
+      - definition: A marine reef which is composed primarily of aragonite structures produced by living organisms, found in shallow, low-nutrient waters.
+      - example: diseased colony of the scleractinian coral Dichocoenia stokesi
+    - Thermal spring
+      - definition: A thermal spring is a spring that is produced by the emergence of geothermally heated groundwater.
+      - example: freshwater cyanobacterial mat of a thermal alkaline sulfide spring (54°C; pH 9.3; 7.4 mg of sulfide per liter; 1.6 mg of oxygen per liter)
+    - Marine
+      - definition: Marine environments are sites that are characterized by the presence of seawater.
+      - example: seawater
+    - Estuary
+      - definition: The tidal mouth of a large river, where the tide meets the stream.
+      - example: sediment sample collected from the estuarine mangrove ecosystem of Chungkang
+    - Foam
+      - definition: Foam is a mass of small bubbles formed on or in liquid, typically by agitation or fermentation.
+      - example: foam on activated sludge
+    - Non-marine Saline and Alkaline
+      - definition: Non-marine saline and alkaline environments consist of inland water bodies, including soda lakes, saline ponds, and hypersaline steppe lakes, characterized by high concentrations of dissolved salts and alkaline conditions (high pH). These ecosystems support specialized microbial communities adapted to extreme salinity and alkalinity. Examples include brine from hypersaline lakes, soda lake sediments, and saline steppe soils.
+      - example: Sediment of Chahannao soda lake
+    - Freshwater
+      - definition: Freshwater environments are sites that are characterized by the presence of freshwater.
+      - example: freshwater cyanobacterial mat of a thermal alkaline sulfide spring (54°C; pH 9.3; 7.4 mg of sulfide per liter; 1.6 mg of oxygen per liter)
+    - Pond (small)
+      - definition: A body of water surrounded by land, usablly smaller than a lake.
+      - example: pond water of Nomori no Ike
+    - Geologic
+      - definition: Geologic environments are sites that are characterized by specific geological properties, such as caves, mines, or quarries.
+      - example: Chihuahuan desert lagoon, pond water
+    - River (Creek)
+      - definition: A natural stream of water flowing in a definite course or channel or series of diverging and converging channels.
+      - example: river water
+    - Groundwater
+      - definition: Underground water which is located in pore spaces found in rock or unconsolidated deposits such as soil, clay, or gravel. The definition of aquifer is quite permissive, referencing any water bearing rock or unconsolidated material.
+      - example: chlorinated solvent contaminated groundwater
+    - Hydrothermal vent
+      - definition: A fissure in the Earth's surface from which geothermally heated water issues.
+      - example: sulfide chimney structure at the Yonaguni Knoll IV hydrothermal field
+    - Sediment
+      - definition: Sediment is a naturally occurring material that is broken down by processes of weathering and erosion, and is subsequently transported by the action of wind, water, or ice, and/or by the force of gravity acting on the particles.
+      - example: soda lake, surface layer of bottom sediments
+    - Ice
+      - definition: Water frozen into a solid state.
+      - example: Antarctic sea-ice diatom assemblages
+    - Brackish
+      - definition: Brackish water has a salinity between that of freshwater and seawater.
+      - example: estuarine mud
+    - Spring
+      - definition: A spring is a point at which water flows from an aquifer to the Earth's surface.
+      - example: sulfur spring
+    - Lake (large)
+      - definition: A large body of water surrounded by land.
+      - example: soda lake, surface layer of bottom sediments
+    - Surface water
+      - definition: Surface water is water that is located on the Earth's surface, such as rivers, lakes, and ponds.
+      - example: surface water and sediment from an acidic hot spring
+    - Cave water
+      - definition: Water that is found in caves.
+      - example: brook water in a cavern
+
+    Output rules:
+      - Your output must be JSON-formatted. If you find that an input should be classified as "Surface water", for example, your output should be {"category": ["Surface water"]}.
+      - Return **only JSON**.
+      - You may find that some samples can be classified into multiple categories. In that case, you must include all the categories that the sample belongs to in the "category" value of your output JSON. For example, if input metadata mentions marine sediment, your output is like {"category": ["Marine", "Sediment"]}
+      - All input must be classified into at least one of the categories. Therefore, your output must NOT be {"category": []}.
+
+    ---
+
+    Here is the input metadata:
