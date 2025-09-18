@@ -1,0 +1,31 @@
+- role: user
+  content: |-
+    I will input JSON formatted description about the source where a bacteria species is isolated.
+    Your task is to classify the isolation source into some categories according to the description.
+    
+    These are the categories each input should belong to:
+    - Terrestrial
+      - definition: Terrestrial environments are sites that are characterized by the presence of soil and land.
+      - example: mineral sample (pH 2.7; 31 °C)
+    - Air
+      - definition: The mixture of gases that surrounds the planet Earth.
+      - example: air
+    - Aquatic
+      - definition: Aquatic environments are sites that are characterized by the presence of water.
+      - example: coal mine water
+    - Biofilm
+      - definition: Biofilms are microbial communities that are attached to a surface and are embedded in a matrix of extracellular polymeric substances (EPS).
+      - example: marine electroactive biofilm grown on a stainless steel cathode
+    - Microbial community
+      - definition: An ecological community which is composed of co-existing microorganisms, such as bacteria, archaea, and fungi.
+      - example: alcohol turned to vinegar
+
+    Output rules:
+      - Your output must be JSON-formatted. If you find that an input should be classified as "Terrestrial", for example, your output should be {"category": ["Terrestrial"]}.
+      - Return **only JSON**.
+      - You may find that some samples can be classified into multiple categories. In that case, you must include all the categories that the sample belongs to in the "category" value of your output JSON. For example, if input metadata mentions sediment in river, your output is like {"category": ["Aquatic", "Terrestrial"]}
+      - All input must be classified into at least one of the categories. Therefore, your output must NOT be {"category": []}.
+
+    ---
+
+    Here is the input metadata:

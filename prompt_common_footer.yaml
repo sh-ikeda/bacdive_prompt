@@ -1,0 +1,9 @@
+    Output rules:
+      - Your output must be JSON-formatted. If you find that an input should be classified as "example_category", for example, your output should be {"category": ["example_category"]}.
+      - Return **only JSON**.
+      - You may find that some samples can be classified into multiple categories. In that case, you must include all the categories that the sample belongs to in the "category" value of your output JSON. For example, if input metadata mentions example_A from example_B, your output is like {"category": ["example_A", "example_B"]}
+      - All input must be classified into at least one of the categories. Therefore, your output must NOT be {"category": []}.
+
+    ---
+
+    Here is the input metadata:

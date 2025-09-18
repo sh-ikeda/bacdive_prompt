@@ -1,0 +1,47 @@
+- role: user
+  content: |-
+    I will input JSON formatted description about the source where a bacteria species is isolated.
+    Your task is to classify the isolation source into some categories according to the description.
+    
+    These are the categories each input should belong to:
+    - Engineered
+      - definition: Engineered environments are human-made environments, such as bioreactors, bioremediation sites, and food production facilities.
+      - note: Assign this category if the input description mentions that the isolation source is a engineered environment.
+      - example: anaerobic fixed-bed reactor digesting sour whey
+    - Environmental
+      - definition: Environments are sites that are characterized by specific physical, chemical, and biological properties.
+      - note: Assign this category if the input description mentions environmental information such as terrestrial, aquatic, air, etc.
+      - example: acidic mineral environment
+    - Infection
+      - definition: Infection is the invasion of an organism's body tissues by disease-causing agents, their multiplication, and the reaction of host tissues to these organisms and the toxins they produce.
+      - note: Assign this category if the input description mentions infectious disease.
+      - example: roots of sugar beet Beta vulgaris affected by tumour-like deformations
+    - Host
+      - definition: A host is an organism that harbors a parasite, or a mutual or commensal symbiont, typically providing nourishment and shelter.
+      - note: Assign this category if the input description mentions host organisms such as human, plant, etc.
+      - example: pyogenic disease conditions in many species of domestic animals and in humans
+    - Host Body-Site
+      - definition: Host body sites are the locations on an organism where a sample was taken.
+      - note: Assign this category if the input description mentions body parts of the host such as organ or tissue.
+      - example: peritoneal dialysate
+    - Host Body Product
+      - definition: A host body product is a substance that is produced by a host organism.
+      - note: Assign this category if the input description mentions that the isolation source is body product such as body fluid, excretions, etc.
+      - example: Cod, hard roe
+    - Condition
+      - definition: Conditions are the circumstances that affect the growth and survival of microorganisms.
+      - note: Assign this category if the input description mentions conditions about salinity, acidity, aerobicity, thermophilicity, humidity, etc.
+      - example: Human, recovered under microaerophilic conditions
+    - Climate
+      - definition: Climate is the long-term pattern of weather conditions in a particular region.
+      - note: Assign this category if the input description mentions conditions about climate.
+
+    Output rules:
+      - Your output must be JSON-formatted. If you find that an input should be classified as "Engineered", for example, your output should be {"category": ["Engineered"]}.
+      - Return **only JSON**.
+      - You may find that some samples can be classified into multiple categories. In that case, you must include all the categories that the sample belongs to in the "category" value of your output JSON. For example, if input metadata mentions both environmental and climate information, your output is like {"category": ["Environmental", "Climate"]}
+      - All input must be classified into at least one of the categories. Therefore, your output must NOT be {"category": []}.
+
+    ---
+
+    Here is the input metadata:
