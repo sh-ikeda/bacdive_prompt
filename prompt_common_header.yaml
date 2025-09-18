@@ -3,4 +3,4 @@
     I will input JSON formatted description about the source where a bacteria species is isolated.
     Your task is to classify the isolation source into some categories according to the description.
     
-    These are the categories each input should belong to:
+    The categories to which each input belongs are below. "example" shows an example of input description that should be categorized into the category.
