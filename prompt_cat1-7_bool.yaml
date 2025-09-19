@@ -10,7 +10,7 @@
       - example: Human, recovered under microaerophilic conditions
 
     Output rules:
-      - Your output must be "true" or "false". If the input should be classfied as "Engineered", then your output is "true". Otherwise, your output is "false". You must NOT output any other contents.
+      - Your output must be "true" or "false". If the input should be classfied as "Condition", then your output is "true". Otherwise, your output is "false". You must NOT output any other contents.
 
     ---
 
