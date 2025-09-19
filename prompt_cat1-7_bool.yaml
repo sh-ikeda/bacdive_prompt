@@ -4,10 +4,10 @@
     I want to classify the isolation source into some categories.
     Your task is to determine whether the isolation source should be classified into a category described below:
     
-    - Category: Environmental
-      - definition: Environments are sites that are characterized by specific physical, chemical, and biological properties.
-      - note: Assign this category if the input description mentions environmental information such as terrestrial, aquatic, air, etc. Note that human-made environments such as wastewater or composting are not included in this category.
-      - example: acidic mineral environment
+    - Category: Condition
+      - definition: Conditions are the circumstances that affect the growth and survival of microorganisms.
+      - note: Assign this category if the input description mentions information that can be used to infer conditions about salinity, acidity, aerobicity, thermophilicity, humidity, etc.
+      - example: Human, recovered under microaerophilic conditions
 
     Output rules:
       - Your output must be "true" or "false". If the input should be classfied as "Engineered", then your output is "true". Otherwise, your output is "false". You must NOT output any other contents.

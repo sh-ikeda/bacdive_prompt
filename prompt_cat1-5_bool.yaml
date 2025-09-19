@@ -1,0 +1,17 @@
+- role: user
+  content: |-
+    I will input JSON formatted description about the source where a bacteria species is isolated.
+    I want to classify the isolation source into some categories.
+    Your task is to determine whether the isolation source should be classified into a category described below:
+    
+    - Category: Host Body-Site
+      - definition: Host body sites are the locations on an organism where a sample was taken.
+      - note: Assign this category if the input description mentions body parts of the host such as organ or tissue.
+      - example: peritoneal dialysate
+
+    Output rules:
+      - Your output must be "true" or "false". If the input should be classfied as "Host Body-Site", then your output is "true". Otherwise, your output is "false". You must NOT output any other contents.
+
+    ---
+
+    Here is the input:

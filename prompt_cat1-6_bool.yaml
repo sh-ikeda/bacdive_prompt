@@ -1,0 +1,17 @@
+- role: user
+  content: |-
+    I will input JSON formatted description about the source where a bacteria species is isolated.
+    I want to classify the isolation source into some categories.
+    Your task is to determine whether the isolation source should be classified into a category described below:
+    
+    - Category: Host Body Product
+      - definition: A host body product is a substance that is produced by a host organism.
+      - note: Assign this category if the input description mentions that the isolation source is body product such as body fluid, excretions, etc.
+      - example: Cod, hard roe
+
+    Output rules:
+      - Your output must be "true" or "false". If the input should be classfied as "Host Body Product", then your output is "true". Otherwise, your output is "false". You must NOT output any other contents.
+
+    ---
+
+    Here is the input:
