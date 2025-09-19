@@ -6,7 +6,7 @@
     
     - Category: Environmental
       - definition: Environments are sites that are characterized by specific physical, chemical, and biological properties.
-      - note: Assign this category if the input description mentions environmental information such as terrestrial, aquatic, air, etc. Note that human-made environments such as wastewater or composting are not included in this category.
+      - note: Assign this category if the input description mentions environmental information such as terrestrial, aquatic, air, etc.
       - example: acidic mineral environment
 
     Output rules:

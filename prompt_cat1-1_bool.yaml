@@ -6,7 +6,7 @@
     
     - Category: Engineered
       - definition: Engineered environments are human-made environments, such as bioreactors, bioremediation sites, and food production facilities.
-      - note: Assign this category if the input description mentions that the isolation source is a human-made environment such as wastewater or composting.
+      - note: Assign this category if the input description mentions that the isolation source is an engineered environment.
       - example: anaerobic fixed-bed reactor digesting sour whey
 
     Output rules:

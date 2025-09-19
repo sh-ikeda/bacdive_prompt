@@ -6,7 +6,7 @@
     
     - Category: Condition
       - definition: Conditions are the circumstances that affect the growth and survival of microorganisms.
-      - note: Assign this category if the input description mentions information that can be used to infer conditions about salinity, acidity, aerobicity, thermophilicity, humidity, etc.
+      - note: Assign this category if the input description mentions conditions about salinity, acidity, aerobicity, thermophilicity, humidity, etc.
       - example: Human, recovered under microaerophilic conditions
 
     Output rules:
